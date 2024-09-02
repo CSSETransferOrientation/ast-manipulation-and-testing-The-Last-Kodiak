@@ -53,6 +53,8 @@ class BinOpAst:
                 return self.left
             if self.left.val == '0':
                 return self.right
+        # ;;> You want to do the recursive calls first so that you can "pull" values up like '+ 0 + 0 1'
+        # ;;> See the propogate test I added
         self.left = self.left.additive_identity()
         self.right = self.right.additive_identity()
         return self
@@ -103,6 +105,7 @@ def tester():
                 print(f'Input: {question}\nExpected: {expected}\nOutput: {answer}\nTest Case Passed\n')
             else:
                 print(f'Input: {question}\nExpected: {expected}\nOutput: {answer}\nTest Case Failed\n')
-
+# ;;> One nice thing about a proper testbench is that it gives you the final counts at the end, X/Y tests passed
+# ;;> Here I have to scroll through to see if there were any failures
 if __name__ == "__main__":
     tester()

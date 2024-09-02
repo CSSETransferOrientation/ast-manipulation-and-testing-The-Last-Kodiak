@@ -1,6 +1,9 @@
 I'm hoping you can check my code with these, becuase I couldn't use these commands to make it run: 
 `./binexp_parser.py` or `python3 binexp_parser.py`
 
+;;> Yep, it ran!
+
+;;> Tests are very sparse and miss some obvious bugs. Overall well done though!
 
 1. I was only able to complete the 2 required sub tasks, plus the one that multiplies by zero. 
 
